@@ -3,11 +3,12 @@
 
 EAPI=8
 
+DISTUTILS_EXT=1
 PYTHON_COMPAT=( python3_{9..11} )
 
 inherit distutils-r1
 
-DESCRIPTION="Python MariaDB extension"
+DESCRIPTION="MariaDB Connector/Python allows python programs access to SQL databases."
 HOMEPAGE="https://www.github.com/mariadb-corporation/mariadb-connector-python https://pypi.org/project/mariadb/"
 SRC_URI="https://files.pythonhosted.org/packages/bb/f4/b93c582407689432927959c452321eb50ff027e878b09506b5a070bcd3f0/mariadb-1.1.6.tar.gz"
 
