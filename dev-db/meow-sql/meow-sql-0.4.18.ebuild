@@ -3,7 +3,7 @@
 
 EAPI=8
 
-inherit cmake
+inherit cmake xdg-utils
 
 DESCRIPTION="A port of HeidiSQL to C++/Qt."
 HOMEPAGE="https://github.com/ragnar-lodbrok/meow-sql"
@@ -17,7 +17,17 @@ DEPEND="
 	dev-db/mariadb
 	dev-qt/qtgui
 	dev-util/cmake
-	dev-db/postgresql"
+	dev-db/postgresql
+	dev-qt/qtwidgets
+	dev-qt/qtsql"
 RDEPEND="${DEPEND}"
 
 S="${WORKDIR}/meow-sql-0.4.18-alpha/"
+
+pkg_postinst() {
+		xdg_icon_cache_update
+}
+
+pkg_postrm() {
+		xdg_icon_cache_update
+}
