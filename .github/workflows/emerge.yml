@@ -1,0 +1,43 @@
+name: "gcc"
+
+on:
+  pull_request:
+   types:
+      - opened
+      - synchronize
+      - reopened
+  push:
+    branches:
+      - base
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  gcc12_amd64_build:
+    runs-on: ubuntu-22.04
+    container: gentoo/stage3:amd64-openrc
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+    - name: Install Ebuilds
+      run: |
+        echo 'FEATURES="-ipc-sandbox -network-sandbox -pid-sandbox"' >> /etc/portage/make.conf
+        mkdir /etc/portage/repos.conf
+        touch /etc/portage/repos.conf/gentoo.conf
+        echo '[gentoo]
+        sync-type = webrsync' >> /etc/portage/repos.conf/gentoo.conf
+        emerge --sync
+        emerge --quiet-build app-eselect/eselect-repository dev-vcs/git
+        eselect repository add claytabase git https://github.com/claybie/claytabase.git
+        eselect repository enable guru
+        emaint sync -r claytabase
+        touch /etc/portage/package.accept_keywords/mariadb-connector-c
+        touch /etc/portage/package.accept_keywords/mariadb-connector-python
+        touch /etc/portage/package.accept_keywords/meow-sql
+        echo '=dev-db/mariadb-connector-c-3.3.4 ~amd64' >> /etc/portage/package.accept_keywords/mariadb-connector-c
+        echo '=dev-python/mariadb-1.1.6 ~amd64' >> /etc/portage/package.accept_keywords/mariadb-connector-python
+        echo '=dev-db/meow-sql ~amd64' >> /etc/portage/package.accept_keywords/meow-sql
+        emerge --quiet-build dev-python/mariadb dev-db/meow-sql
