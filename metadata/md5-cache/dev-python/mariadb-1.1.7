@@ -1,4 +1,4 @@
-BDEPEND=app-arch/unzip dev-python/setuptools[python_targets_python3_10(-)?,python_targets_python3_11(-)?] test? ( dev-python/pytest[python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) test? ( >=dev-db/mariadb-connector-c-3.3.4 >=dev-python/pytest-7.3.1[python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) >=dev-python/setuptools-67.8.0-r1[python_targets_python3_10(-)?,python_targets_python3_11(-)?]
+BDEPEND=app-arch/unzip dev-python/setuptools[python_targets_python3_10(-)?,python_targets_python3_11(-)?] test? ( dev-python/unittest-or-fail[python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) test? ( >=dev-db/mariadb-connector-c-3.3.4 python_targets_python3_10? ( dev-python/unittest-or-fail[python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) python_targets_python3_11? ( dev-python/unittest-or-fail[python_targets_python3_10(-)?,python_targets_python3_11(-)?] ) ) python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 ) >=dev-python/gpep517-13[python_targets_python3_10(-)?,python_targets_python3_11(-)?] >=dev-python/setuptools-67.8.0-r1[python_targets_python3_10(-)?,python_targets_python3_11(-)?]
 DEFINED_PHASES=compile configure install prepare test
 DEPEND=python_targets_python3_10? ( dev-lang/python:3.10 ) python_targets_python3_11? ( dev-lang/python:3.11 )
 DESCRIPTION=MariaDB Connector/Python allows python programs access to SQL databases.
@@ -12,6 +12,6 @@ RDEPEND=>=dev-db/mariadb-connector-c-3.3.4 python_targets_python3_10? ( dev-lang
 REQUIRED_USE=|| ( python_targets_python3_10 python_targets_python3_11 )
 RESTRICT=!test? ( test ) !test? ( test )
 SLOT=0
-SRC_URI=https://files.pythonhosted.org/packages/bb/f4/b93c582407689432927959c452321eb50ff027e878b09506b5a070bcd3f0/mariadb-1.1.6.tar.gz
+SRC_URI=https://files.pythonhosted.org/packages/af/d7/986336544ff6f3c555537aa422043a2e0702779ec4f2d5d556dc1b35485a/mariadb-1.1.7.tar.gz
 _eclasses_=toolchain-funcs	0c8a0b0d318eb5d5180d114bd3f6592b	multilib	c19072c3cd7ac5cb21de013f7e9832e0	flag-o-matic	ad475baa777c9978fa035216c8264a10	out-of-source-utils	1a9007554652a6e627edbccb3c25a439	multibuild	30dbf3c5a31db09a19f31ad0a68f2405	multiprocessing	b4e253ab22cef7b1085e9b67c7a3b730	ninja-utils	f3010c780f65d1bb5aea15a9af1adc9c	python-utils-r1	1f435bc389faf790af695df46b8dcb73	python-r1	b3f874304c1bda6ffc3450ebb4ae5169	distutils-r1	b7cd5736a595ec0df9b164d5aec6f228
-_md5_=eb12dafed1f781775ff9c2d3f211e935
+_md5_=92d7d83a10dd987b9a0253c26c53b6c3
