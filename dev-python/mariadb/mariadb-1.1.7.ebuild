@@ -11,7 +11,7 @@ inherit distutils-r1
 
 DESCRIPTION="MariaDB Connector/Python allows python programs access to SQL databases."
 HOMEPAGE="https://www.github.com/mariadb-corporation/mariadb-connector-python https://pypi.org/project/mariadb/"
-SRC_URI="https://files.pythonhosted.org/packages/af/d7/986336544ff6f3c555537aa422043a2e0702779ec4f2d5d556dc1b35485a/mariadb-1.1.7.tar.gz"
+SRC_URI="https://mirror.mariadb.org/connector-python-1.1.7/mariadb-connector-python-1.1.7.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"

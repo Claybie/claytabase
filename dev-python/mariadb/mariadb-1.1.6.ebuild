@@ -3,6 +3,7 @@
 
 EAPI=8
 
+DISTUTILS_USE_PEP517=setuptools
 DISTUTILS_EXT=1
 PYTHON_COMPAT=( python3_{9..11} )
 
@@ -10,13 +11,15 @@ inherit distutils-r1
 
 DESCRIPTION="MariaDB Connector/Python allows python programs access to SQL databases."
 HOMEPAGE="https://www.github.com/mariadb-corporation/mariadb-connector-python https://pypi.org/project/mariadb/"
-SRC_URI="https://files.pythonhosted.org/packages/bb/f4/b93c582407689432927959c452321eb50ff027e878b09506b5a070bcd3f0/mariadb-1.1.6.tar.gz"
+SRC_URI="https://mirror.mariadb.org/connector-python-1.1.6/mariadb-connector-python-1.1.6.tar.gz"
 
 LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~x86"
 IUSE="test"
 RESTRICT="!test? ( test )"
+
+S="${WORKDIR}/mariadb-connector-python-1.1.6"
 
 DOCS="README.md"
 
