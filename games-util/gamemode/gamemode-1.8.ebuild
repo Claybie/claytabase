@@ -7,14 +7,15 @@ MULTILIB_COMPAT=( abi_x86_{32,64} )
 
 inherit meson-multilib systemd
 
-DESCRIPTION="A fork of Feral's gamemode by Henrik Holst; enables cpu core pinning & parking."
-HOMEPAGE="https://github.com/HenrikHolst/gamemode"
+DESCRIPTION="Optimise Linux system performance on demand"
+HOMEPAGE="https://github.com/FeralInteractive/gamemode"
 
-if [[ ${PV} == "9999" ]] ; then
-	EGIT_REPO_URI="https://github.com/HenrikHolst/gamemode.git"
+if [[ ${PV} == "1.8" ]] ; then
+	EGIT_REPO_URI="https://github.com/FeralInteractive/gamemode.git"
+	EGIT_COMMIT="bb40374"
 	GAMEMODE_GIT_PTR="master"
 	inherit git-r3
-	KEYWORDS="** ~x86"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="BSD"
