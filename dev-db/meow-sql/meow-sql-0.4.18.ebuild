@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="
 	dev-db/mariadb
 	dev-qt/qtgui
-	dev-util/cmake
+	dev-build/cmake
 	dev-db/postgresql
 	dev-qt/qtwidgets
 	dev-qt/qtsql"
