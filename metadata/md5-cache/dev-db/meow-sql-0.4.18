@@ -1,14 +1,14 @@
-BDEPEND=>=dev-util/ninja-1.8.2 >=dev-util/cmake-3.20.5
+BDEPEND=app-alternatives/ninja >=dev-build/cmake-3.20.5
 DEFINED_PHASES=compile configure install postinst postrm prepare test
-DEPEND=dev-db/mariadb dev-qt/qtgui dev-util/cmake dev-db/postgresql dev-qt/qtwidgets dev-qt/qtsql
+DEPEND=dev-db/mariadb dev-qt/qtgui dev-build/cmake dev-db/postgresql dev-qt/qtwidgets dev-qt/qtsql
 DESCRIPTION=A port of HeidiSQL to C++/Qt.
 EAPI=8
 HOMEPAGE=https://github.com/ragnar-lodbrok/meow-sql
 INHERIT=cmake xdg-utils
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-db/mariadb dev-qt/qtgui dev-util/cmake dev-db/postgresql dev-qt/qtwidgets dev-qt/qtsql
+RDEPEND=dev-db/mariadb dev-qt/qtgui dev-build/cmake dev-db/postgresql dev-qt/qtwidgets dev-qt/qtsql
 SLOT=0
 SRC_URI=https://github.com/ragnar-lodbrok/meow-sql/archive/refs/tags/v0.4.18-alpha.tar.gz
-_eclasses_=cmake	0f2e0c197fad0312f3c4765c9cf36271	flag-o-matic	baa4d385108ac87993edac956a916a36	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	39e7a84b06eff4efd9f2e0c3d1668b98	toolchain-funcs	70ec42843fec87d20fd94c67e77cdbff	xdg-utils	baea6080dd821f5562d715887954c9d3
-_md5_=0cda7ff9dafa29348c330d940c569261
+_eclasses_=cmake	c7c9a62d6232cac66d4ea32d575c3e7c	flag-o-matic	b2b07efa51009704f88173b2c7feab47	multilib	c19072c3cd7ac5cb21de013f7e9832e0	multiprocessing	30ead54fa2e2b5f9cd4e612ffc34d0fe	ninja-utils	2df4e452cea39a9ec8fb543ce059f8d6	toolchain-funcs	e56c7649b804f051623c8bc1a1c44084	xdg-utils	baea6080dd821f5562d715887954c9d3
+_md5_=8176dbd93c12e115c48796d8e5c06b2f

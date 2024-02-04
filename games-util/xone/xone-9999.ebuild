@@ -11,7 +11,7 @@ XONE_DRIVER_VERSION="201707-1cd6a87c-623f-4407-a52d-c31be49e925c_e19f60808bdcbfb
 DESCRIPTION="Linux kernel driver for Xbox One and Xbox Series X|S accessories"
 HOMEPAGE="https://github.com/medusalix/xone"
 SRC_URI="
-	mirror+https://github.com/claytabase/xone/archive/${COMMIT}.tar.gz -> ${P}.tar.gz
+	mirror+https://github.com/claybie/xone/archive/refs/tags/v0.33.tar.gz -> ${P}.tar.gz
 	http://download.windowsupdate.com/c/msdownload/update/driver/drvs/${XONE_DRIVER_VERSION:0:4}/${XONE_DRIVER_VERSION:4:2}/${XONE_DRIVER_VERSION:7}.cab
 		-> ${PN}-driver-${XONE_DRIVER_VERSION}.cab
 "
